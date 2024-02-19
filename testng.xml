@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="true" thread-count="2">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="Test.GoogleSearchTest"/>
+      <class name="Test.OrangeHRM" >
+		  <methods>
+			  <exclude name="EnterLoginDetails"></exclude>
+			  <exclude name="NavigateToMyInfo"></exclude>
+			  <exclude name="VerifyMyInfo"></exclude>
+			  <include name="VerifyLogin"></include>
+		  </methods>
+		  </class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
